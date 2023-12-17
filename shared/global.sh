@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# name=shared/global.lib
+# name=shared/global.sh
 # version=1.0.0
 
 # preseed identifier
@@ -17,6 +17,12 @@ _var_run_once_unit_name='run-once.service';
 # run once script name
 _var_run_once_script_name='run-once.sh';
 
+# during install script name
+_var_during_install_script_name='during-install.sh';
+
+# after install script name
+_var_after_install_script_name='after-install.sh';
+
 # download and start custom install functions
 # this is called from preseed.cfg d-i preseed/late_command
 _fn_bootstrap () {
@@ -24,8 +30,8 @@ _fn_bootstrap () {
     _download_file 'shared' '/root/tmp' ${_var_run_once_unit_name};
     # /usr/local/bin
     _download_file 'shared' '/root/tmp' ${_var_run_once_script_name};
-    _download_file ${__custom_preseed} ${_var_install_tmp_path} 'during-install.sh';
-    _download_file ${__custom_preseed} ${_var_install_tmp_path} 'after-install.sh';
+    _download_file ${__custom_preseed} ${_var_install_tmp_path} ${_var_during_install_script_name};
+    _download_file ${__custom_preseed} ${_var_install_tmp_path} ${_var_after_install_script_name};
 }
 
 _download_file () {
