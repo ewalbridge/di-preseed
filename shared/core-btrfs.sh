@@ -139,9 +139,13 @@ fn_create_btrfs_var () {
 # mount temporary btrfs volume
 mount ${var_block_device_path} ${var_btrfs_mount_path};
 
+# rename btrfs root
 fn_rename_btrfs_rootfs;
+
+# create subvolumes and move files into new mounts
 fn_create_btrfs_tmp;
 fn_create_btrfs_home;
 fn_create_btrfs_var;
 
+# unmount temporary btrfs volume
 umount ${var_block_device_path};

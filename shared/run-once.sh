@@ -26,7 +26,7 @@ fn_self_cleanup () {
 
     # cleanup various install temp files
     rm /.wget-hsts;
-    #rm -rf ${var_install_tmp_path};
+    rm -rf ${var_install_tmp_path};
 
     # final reboot
     reboot;

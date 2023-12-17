@@ -50,11 +50,18 @@ fn_core_btrfs () {
     _fn_logger 'run core-btrfs.sh';
 }
 
-# download all files first
+
+# download all installer related files first
 fn_download_files;
+
+# install custom packages second
+fn_install_custom;
+
 # create swapfile
 fn_core_swapfile;
+
 # replace dhcp client
 fn_core_dhcpclient;
+
 # create btrfs subvolumes last
 fn_core_btrfs;
