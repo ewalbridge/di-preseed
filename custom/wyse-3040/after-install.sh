@@ -62,10 +62,10 @@ fn_download_files;
 fn_install_custom;
 
 # create swapfile
-#fn_core_swapfile;
+fn_core_swapfile;
 
 # replace dhcp client
-#fn_core_dhcpclient;
+fn_core_dhcpclient;
 
 # create btrfs subvolumes last
-#fn_core_btrfs;
+fn_core_btrfs;

@@ -1,7 +1,6 @@
 [Unit]
 Description=Debian Installer Run Once
-After=local-fs.target
-After=network.target
+After=local-fs.target network.target nss-lookup.target
 
 [Service]
 User=root
