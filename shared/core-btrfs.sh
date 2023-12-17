@@ -7,4 +7,6 @@
 var_install_tmp_path='/root/tmp';
 # reference global
 . ${var_install_tmp_path}/global.sh
+# log name of script
+_fn_logger 'shared/core-btrfs.sh';
 ### INCLUDE ###
