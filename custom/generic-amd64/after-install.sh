@@ -10,3 +10,7 @@ var_install_tmp_path='/root/tmp';
 # log name of script
 _fn_logger 'generic-amd64/after-install.sh';
 ### INCLUDE ###
+
+_fn_logger 'run core-swapfile.sh';
+_fn_logger 'run core-dhcpclient.sh';
+_fn_logger 'run core-btrfs.sh';
