@@ -29,6 +29,12 @@ fn_download_files () {
     chmod +x ${var_install_tmp_path}/${var_core_btrfs_script_name};
 }
 
+fn_install_custom (){
+    # instead of preseed.cfg: d-i pkgsel/include
+    # offers greater control
+    apt install -y 'openssh-server avahi-daemon libnss-mdns augeas-tools tcpdump';
+}
+
 fn_core_swapfile () {
     ${var_install_tmp_path}/${var_core_swapfile_script_name};
     _fn_logger 'run core-swapfile.sh';
@@ -46,7 +52,6 @@ fn_core_btrfs () {
 
 # download all files first
 fn_download_files;
-
 # create swapfile
 fn_core_swapfile;
 # replace dhcp client
