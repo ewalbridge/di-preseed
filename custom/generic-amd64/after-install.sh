@@ -11,10 +11,9 @@ var_install_tmp_path='/root/tmp';
 _fn_logger 'generic-amd64/after-install.sh';
 ### INCLUDE ###
 
-
-### apt packages
+### ADDITIONAL APT PACKAGES ###
 var_apt_install_packages='openssh-server avahi-daemon libnss-mdns augeas-tools tcpdump'
-###
+### ADDITIONAL APT PACKAGES ###
 
 var_core_swapfile_script_name='core-swapfile.sh'
 var_core_dhcpclient_script_name='core-dhcpclient.sh'
