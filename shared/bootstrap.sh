@@ -18,21 +18,22 @@ var_custom_preseed_id=${1};
 # download and start custom install functions
 # this is called from preseed.cfg d-i preseed/late_command
 fn_bootstrap () {
-    # download run-once.service to '/etc/systemd/system' and enable service
-    _fn_download_file ${_var_shared_url_path} ${_var_run_once_unit_path} ${_var_run_once_unit_name};
-    #systemctl enable ${_var_run_once_unit_name};
+    # download during-install.sh and set as executable 
+    _fn_download_file ${_var_custom_url_path}/${var_custom_preseed_id} ${var_install_tmp_path} ${_var_during_install_script_name};
+    chmod +x ${var_install_tmp_path}/${_var_during_install_script_name};
+    ${var_install_tmp_path}/${_var_during_install_script_name};
+
+    # download after-install.sh and set as executable 
+    _fn_download_file ${_var_custom_url_path}/${var_custom_preseed_id} ${var_install_tmp_path} ${_var_after_install_script_name};
+    chmod +x ${var_install_tmp_path}/${_var_after_install_script_name};
 
     # download run-once.sh to '/usr/local/bin' and set as executable
     _fn_download_file ${_var_shared_url_path} ${_var_run_once_script_path} ${_var_run_once_script_name};
     chmod +x ${_var_run_once_script_path}/${_var_run_once_script_name};
 
-    # download during-install.sh and set as executable 
-    _fn_download_file ${_var_custom_url_path}/${var_custom_preseed_id} ${var_install_tmp_path} ${_var_during_install_script_name};
-    chmod +x ${var_install_tmp_path}/${_var_during_install_script_name};
-
-    # download after-install.sh and set as executable 
-    _fn_download_file ${_var_custom_url_path}/${var_custom_preseed_id} ${var_install_tmp_path} ${_var_after_install_script_name};
-    chmod +x ${var_install_tmp_path}/${_var_after_install_script_name};
+    # download run-once.service to '/etc/systemd/system' and enable service
+    _fn_download_file ${_var_shared_url_path} ${_var_run_once_unit_path} ${_var_run_once_unit_name};
+    systemctl enable ${_var_run_once_unit_name};
 }
 
 fn_bootstrap;

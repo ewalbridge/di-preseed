@@ -2,6 +2,9 @@
 # name=shared/global.sh
 # version=1.0.0
 
+# temp install file location
+var_install_tmp_path='/root/tmp';
+
 # preseed url root
 _var_url_root='https://raw.githubusercontent.com/ewalbridge/di-preseed/main';
 
@@ -31,6 +34,7 @@ _var_run_once_script_path='/usr/local/bin'; #'/usr/local/bin';
 
 _fn_logger () {    
     logger 'di-preseed:' ${1};
+    echo "${1}" >> ${var_install_tmp_path}/install.log;
 }
 
 # shared download function
