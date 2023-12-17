@@ -13,8 +13,8 @@ _fn_logger 'shared/core-dhcpclient.sh';
 
 # replace the isc-dhcp with the newer dhcpcd5
 fn_replace_dhcpclient () {
-    apt install -y 'dhcpcd5';
-    apt purge -y 'isc-dhcp-client isc-dhcp-common';
+    apt-get install -y dhcpcd5;
+    apt-get purge -y isc-dhcp-client isc-dhcp-common;
 }
 
 fn_replace_dhcpclient;

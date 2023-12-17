@@ -36,7 +36,7 @@ fn_download_files () {
 fn_install_custom (){
     # instead of preseed.cfg: d-i pkgsel/include
     # offers greater control
-    apt install -y ${var_apt_install_packages}
+    apt-get install -y ${var_apt_install_packages}
 }
 
 fn_core_swapfile () {
