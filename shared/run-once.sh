@@ -6,11 +6,12 @@
 # temp install file location
 var_install_tmp_path='/root/tmp';
 # reference global
-. ${var_install_tmp_path}/global.sh
+. ${var_install_tmp_path}/global.sh;
 # log name of script
 _fn_logger 'shared/run-once.sh';
 ### INCLUDE ###
 
+# run after install script
 fn_run_after_install_script () {
     # run after-install.sh
     ${var_install_tmp_path}/${_var_after_install_script_name};

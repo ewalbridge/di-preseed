@@ -6,11 +6,10 @@
 # temp install file location
 var_install_tmp_path='/root/tmp';
 # reference global
-. ${var_install_tmp_path}/global.sh
+. ${var_install_tmp_path}/global.sh;
 # log name of script
 _fn_logger 'shared/bootstrap.sh';
 ### INCLUDE ###
-
 
 # preseed identifier
 var_custom_preseed_id=${1};
