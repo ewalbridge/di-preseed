@@ -13,12 +13,12 @@ _var_custom_url_path='custom';
 # run once systemd unit name
 _var_run_once_unit_name='run-once.service';
 # run once systemd unit path
-_var_run_once_unit_path='/etc/systemd/system';
+_var_run_once_unit_path='/root/tmp'; #'/etc/systemd/system';
 
 # run once script name
 _var_run_once_script_name='run-once.sh';
 # run once script path
-_var_run_once_script_name='/usr/local/bin';
+_var_run_once_script_path='/root/tmp'; #'/usr/local/bin';
 
 # during install script name
 _var_during_install_script_name='during-install.sh';
