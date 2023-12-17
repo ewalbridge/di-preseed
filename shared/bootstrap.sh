@@ -21,6 +21,7 @@ fn_bootstrap () {
     # download during-install.sh and set as executable 
     _fn_download_file ${_var_custom_url_path}/${var_custom_preseed_id} ${var_install_tmp_path} ${_var_during_install_script_name};
     chmod +x ${var_install_tmp_path}/${_var_during_install_script_name};
+    # run during-install.sh
     ${var_install_tmp_path}/${_var_during_install_script_name};
 
     # download after-install.sh and set as executable 
@@ -31,8 +32,9 @@ fn_bootstrap () {
     _fn_download_file ${_var_shared_url_path} ${_var_run_once_script_path} ${_var_run_once_script_name};
     chmod +x ${_var_run_once_script_path}/${_var_run_once_script_name};
 
-    # download run-once.service to '/etc/systemd/system' and enable service
+    # download run-once.service to '/etc/systemd/system'
     _fn_download_file ${_var_shared_url_path} ${_var_run_once_unit_path} ${_var_run_once_unit_name};
+    # enable run-once.service service
     systemctl enable ${_var_run_once_unit_name};
 }
 
