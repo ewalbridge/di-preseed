@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# name=shared/global.sh
+# name=shared/global.lib
 # version=1.0.0
 
 # preseed identifier
