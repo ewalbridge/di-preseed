@@ -4,7 +4,7 @@
 
 ### INCLUDE ###
 # temp install file location
-install_tmp_path='/root/tmp';
+var_install_tmp_path='/root/tmp';
 # reference global
 . ${var_install_tmp_path}/global.sh
 ### INCLUDE ###
