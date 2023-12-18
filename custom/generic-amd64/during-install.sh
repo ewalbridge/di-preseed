@@ -12,7 +12,7 @@ _fn_logger 'generic-amd64/during-install.sh';
 ### INCLUDE ###
 
 ### ADDITIONAL APT PACKAGES ###
-var_apt_install_packages='openssh-server avahi-daemon libnss-mdns augeas-tools tcpdump';
+var_apt_install_packages='openssh-server dhcpcd5 avahi-daemon libnss-mdns augeas-tools tcpdump';
 ### ADDITIONAL APT PACKAGES ###
 
 fn_install_custom () {
