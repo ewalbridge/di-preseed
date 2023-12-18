@@ -39,7 +39,7 @@ _var_core_btrfs_script_name='core-btrfs.sh';
 
 _fn_logger () {    
     logger 'di-preseed:' ${1};
-    echo "${1}" >> ${var_install_tmp_path}/install.log;
+    echo "${1}" >> /root/install.log;
 }
 
 # shared download function
