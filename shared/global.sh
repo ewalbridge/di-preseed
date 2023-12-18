@@ -32,6 +32,11 @@ _var_run_once_script_name='run-once.sh';
 # run once script path
 _var_run_once_script_path='/usr/local/bin'; #'/usr/local/bin';
 
+# core script names
+_var_core_swapfile_script_name='core-swapfile.sh';
+_var_core_dhcpclient_script_name='core-dhcpclient.sh';
+_var_core_btrfs_script_name='core-btrfs.sh';
+
 _fn_logger () {    
     logger 'di-preseed:' ${1};
     echo "${1}" >> ${var_install_tmp_path}/install.log;
