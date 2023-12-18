@@ -12,10 +12,10 @@ _fn_logger 'wyse-3040/during-install.sh';
 ### INCLUDE ###
 
 ### ADDITIONAL APT PACKAGES ###
-var_apt_install_packages='openssh-server avahi-daemon libnss-mdns augeas-tools tcpdump firmware-intel-sound wpasupplicant wi wireless-tools';
+var_apt_install_packages='openssh-server avahi-daemon libnss-mdns augeas-tools tcpdump firmware-intel-sound wpasupplicant wireless-tools';
 ### ADDITIONAL APT PACKAGES ###
 
-fn_install_custom (){
+fn_install_custom () {
     # instead of preseed.cfg: d-i pkgsel/include
     # offers greater control
     # cat '/root/tmp/apt.list' | xargs | apt-get install -y;

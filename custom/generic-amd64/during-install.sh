@@ -15,7 +15,7 @@ _fn_logger 'generic-amd64/during-install.sh';
 var_apt_install_packages='openssh-server avahi-daemon libnss-mdns augeas-tools tcpdump';
 ### ADDITIONAL APT PACKAGES ###
 
-fn_install_custom (){
+fn_install_custom () {
     # instead of preseed.cfg: d-i pkgsel/include
     # offers greater control
     # cat '/root/tmp/apt.list' | xargs | apt-get install -y;
