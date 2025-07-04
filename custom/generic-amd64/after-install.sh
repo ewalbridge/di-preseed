@@ -16,10 +16,10 @@ fn_core_swapfile () {
     _fn_logger 'run core-swapfile.sh';
 }
 
-fn_core_dhcpclient () {
-    ${var_install_tmp_path}/${_var_core_dhcpclient_script_name};
-    _fn_logger 'run core-dhcpclient.sh';
-}
+#fn_core_dhcpclient () {
+#    ${var_install_tmp_path}/${_var_core_dhcpclient_script_name};
+#    _fn_logger 'run core-dhcpclient.sh';
+#}
 
 fn_core_btrfs () {
     ${var_install_tmp_path}/${_var_core_btrfs_script_name};
