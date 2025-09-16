@@ -30,7 +30,7 @@ fn_core_btrfs () {
 fn_core_swapfile;
 
 # replace dhcp client
-#fn_core_dhcpclient;
+####fn_core_dhcpclient;
 
 # create btrfs subvolumes last
-fn_core_btrfs;
+####fn_core_btrfs;
