@@ -37,4 +37,4 @@ fn_bootstrap () {
     systemctl enable ${_var_run_once_unit_name};
 }
 
-fn_bootstrap;
+####fn_bootstrap;
