@@ -17,4 +17,4 @@ fn_replace_dhcpclient () {
     apt-get purge -y isc-dhcp-client isc-dhcp-common;
 }
 
-#fn_replace_dhcpclient;
+fn_replace_dhcpclient;
